@@ -5,3 +5,7 @@ node_modules/
 build/
 dist/
 out/
+
+# sql queries ...
+sql_query/
+*.sql
