@@ -1,0 +1,7 @@
+# Dependencies ...
+node_modules/
+
+# build folders ...
+build/
+dist/
+out/

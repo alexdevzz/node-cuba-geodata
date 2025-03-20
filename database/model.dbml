@@ -1,0 +1,21 @@
+Table province {
+  id int [pk, increment]
+  name varchar
+  description varchar
+
+}
+
+Table city {
+  id int [pk, increment]
+  name varchar
+  description varchar
+  province_fk int [ref: > province.id]
+
+}
+
+Table town {
+  id int [pk, increment]
+  name varchar
+  description varchar
+  city_fk int [ref: > city.id]
+}
