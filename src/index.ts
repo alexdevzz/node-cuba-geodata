@@ -36,4 +36,3 @@ console.log(`\n************** ${count_total} - Total de Localidades Agreagadas *
 
 
 
-
