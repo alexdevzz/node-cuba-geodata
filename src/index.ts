@@ -1,84 +1,84 @@
 import db from './db-manage';
 
 
-const localidadesCienfuegos = {
-  "Cienfuegos": [
+const localidadesCiegoDeAvila = {
+  "Ciego de Ávila": [
     "Centro Ciudad",
-    "Punta Gorda",
-    "La Juanita",
-    "Reina",
-    "Buena Vista",
-    "San Lázaro"
+    "Venezuela",
+    "Baraguá",
+    "Primero de Enero",
+    "Chambas",
+    "Florencia"
   ],
-  "Aguada de Pasajeros": [
-    "Centro Aguada",
-    "Guayacanes",
-    "La Sierrita",
-    "Las Moscas",
-    "El Francés",
-    "San Fernando"
+  "Morón": [
+    "Centro Morón",
+    "Ciro Redondo",
+    "Chambas",
+    "Florencia",
+    "Majagua",
+    "Venezuela"
   ],
-  "Rodas": [
-    "Centro Rodas",
-    "Aguada de Pasajeros",
-    "Guayacanes",
-    "La Sierrita",
-    "Las Moscas",
-    "El Francés"
+  "Chambas": [
+    "Centro Chambas",
+    "Florencia",
+    "Majagua",
+    "Venezuela",
+    "Morón",
+    "Ciro Redondo"
   ],
-  "Palmira": [
-    "Centro Palmira",
-    "Cruces",
-    "Lajas",
-    "Aguada de Pasajeros",
-    "Rodas",
-    "Guayacanes"
+  "Majagua": [
+    "Centro Majagua",
+    "Venezuela",
+    "Morón",
+    "Ciro Redondo",
+    "Chambas",
+    "Florencia"
   ],
-  "Lajas": [
-    "Centro Lajas",
-    "Cruces",
-    "Palmira",
-    "Aguada de Pasajeros",
-    "Rodas",
-    "Guayacanes"
+  "Florencia": [
+    "Centro Florencia",
+    "Chambas",
+    "Majagua",
+    "Venezuela",
+    "Morón",
+    "Ciro Redondo"
   ],
-  "Cruces": [
-    "Centro Cruces",
-    "Palmira",
-    "Lajas",
-    "Aguada de Pasajeros",
-    "Rodas",
-    "Guayacanes"
+  "Venezuela": [
+    "Centro Venezuela",
+    "Baraguá",
+    "Primero de Enero",
+    "Ciego de Ávila",
+    "Morón",
+    "Chambas"
   ],
-  "Cumanayagua": [
-    "Centro Cumanayagua",
-    "Aguada de Pasajeros",
-    "Rodas",
-    "Guayacanes",
-    "La Sierrita",
-    "Las Moscas"
+  "Baraguá": [
+    "Centro Baraguá",
+    "Primero de Enero",
+    "Ciego de Ávila",
+    "Venezuela",
+    "Morón",
+    "Chambas"
   ],
-  "Abreus": [
-    "Centro Abreus",
-    "Rodas",
-    "Guayacanes",
-    "La Sierrita",
-    "Las Moscas",
-    "El Francés"
+  "Primero de Enero": [
+    "Centro Primero de Enero",
+    "Ciego de Ávila",
+    "Venezuela",
+    "Baraguá",
+    "Morón",
+    "Chambas"
   ],
-  "Santa Isabel de las Lajas": [
-    "Centro Santa Isabel",
-    "Abreus",
-    "Rodas",
-    "Guayacanes",
-    "La Sierrita",
-    "Las Moscas"
+  "Ciro Redondo": [
+    "Centro Ciro Redondo",
+    "Morón",
+    "Chambas",
+    "Florencia",
+    "Majagua",
+    "Venezuela"
   ]
 };
 
 let count_total = 0
 
-Object.entries(localidadesCienfuegos).forEach(([municipio, localidades]) => {
+Object.entries(localidadesCiegoDeAvila).forEach(([municipio, localidades]) => {
 
   console.log(`\nmunicipio -> ${municipio}\n`)
   let count_loc = 0
