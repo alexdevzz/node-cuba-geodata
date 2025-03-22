@@ -1,4 +1,4 @@
-import { dbConnect } from './manage'
+import { dbConnect } from '../settings/manage'
 
 export const addTown = (name: string, city: string, description?: string): void => {
   const db = dbConnect()
