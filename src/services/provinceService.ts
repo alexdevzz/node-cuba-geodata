@@ -7,14 +7,26 @@ export const addProvince = (name: string, description?: string): void => {
   db.close()
 }
 
-export const getProvinces = (onlyProvince?: string, depth: 0 | 1 | 2 = 0): provinceType | provinceType[] => {
+export const getProvinces = (onlyProvince: string | null = null, depth: 0 | 1 | 2 = 0): provinceType | provinceType[] => {
   const db = dbConnect()
 
   // all provinces ...
-  if (!onlyProvince || onlyProvince === '') {
-    const rows = db.prepare('SELECT name, description FROM province').all() as provinceType[]
+  if (onlyProvince?.trim() === '' || onlyProvince === null) {
+    const provinces = db.prepare('SELECT name, description FROM province').all() as provinceType[]
+    if (depth > 0) {
+      provinces.forEach((province) => {
+        province.cities = db.prepare(`SELECT name, description FROM city WHERE province_fk = (SELECT id FROM province WHERE name = ?)`)
+          .all(province.name) as cityType[]
+        if (depth === 2) {
+          province.cities.forEach((city) => {
+            city.towns = db.prepare(`SELECT name, description FROM town WHERE city_fk = (SELECT id FROM city WHERE name = ?)`)
+              .all(city.name) as townType[]
+          })
+        }
+      })
+    }
     db.close()
-    return rows
+    return provinces
   }
 
   // only one province ...
@@ -34,6 +46,7 @@ export const getProvinces = (onlyProvince?: string, depth: 0 | 1 | 2 = 0): provi
     return province
   }
 
+  db.close()
   throw new Error('That province does not exist')
 }
 
