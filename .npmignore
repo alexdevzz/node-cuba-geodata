@@ -1,0 +1,9 @@
+# Dependencies ...
+node_modules/
+
+# sql queries ...
+sql_query/
+*.sql
+
+# github properties ...
+.github/

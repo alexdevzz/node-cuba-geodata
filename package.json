@@ -1,7 +1,7 @@
 {
   "name": "cuba-geodata",
-  "version": "0.1.2",
-  "description": "Contains all Cuban locations with the 'Province - Cities - Towns' structure. Enjoy!",
+  "version": "0.1.3",
+  "description": "Contains all Cuban locations with the Province - Cities - Towns structure. Enjoy!",
   "keywords": [
     "cuba",
     "cubans",
