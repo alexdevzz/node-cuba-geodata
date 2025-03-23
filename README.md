@@ -1,9 +1,9 @@
 # Cuba GeoData <img src="https://github.com/user-attachments/assets/0bf156a7-152f-4de9-8c6b-954c826f0dbc" alt="React" width="30" height="30">
 ![NPM Version](https://img.shields.io/npm/v/cuba-geodata?color=blue)
 ![Static Badge](https://img.shields.io/badge/build-deployed-red)
-![GitHub License](https://img.shields.io/github/license/alexdevzz/node-cuba-towns?color=green)
-![GitHub Created At](https://img.shields.io/github/created-at/alexdevzz/node-cuba-towns?color=darkcyan)
-![GitHub top language](https://img.shields.io/github/languages/top/alexdevzz/node-cuba-towns?color=purple)
+![GitHub License](https://img.shields.io/github/license/alexdevzz/node-cuba-geodata?color=green)
+![GitHub Created At](https://img.shields.io/github/created-at/alexdevzz/node-cuba-geodata?color=darkcyan)
+![GitHub top language](https://img.shields.io/github/languages/top/alexdevzz/node-cuba-geodata?color=purple)
 ![Framework](https://img.shields.io/badge/framework-Node_JS-darkgreen?color=gren)
 
 ## Description

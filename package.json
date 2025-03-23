@@ -1,6 +1,6 @@
 {
   "name": "cuba-geodata",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Contains all Cuban locations with the 'Province - Cities - Towns' structure. Enjoy!",
   "keywords": [
     "cuba",
@@ -17,6 +17,11 @@
   "author": "alexdevzz <alexdev.workenv@gmail.com> (https://github.com/alexdevzz)",
   "main": "build/index.js",
   "types": "build/globals.d.ts",
+  "homepage": "https://github.com/alexdevzz/node-cuba-geodata",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/alexdevzz/node-cuba-geodata"
+  },
   "scripts": {
     "dev": "ts-node src/index.ts",
     "start": "node build/index.js",
