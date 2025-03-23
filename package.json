@@ -1,16 +1,20 @@
 {
   "name": "cuba-geodata",
-  "version": "0.1.0",
-  "description": "Contains all Cuban locations with the 'Province -> Cities -> Towns' structure. Enjoy!",
+  "version": "0.1.1",
+  "description": "Contains all Cuban locations with the 'Province - Cities - Towns' structure. Enjoy!",
   "keywords": [
     "cuba",
     "cubans",
     "province",
-    "municipaly",
-    "town"
+    "city",
+    "town",
+    "node",
+    "sqlite",
+    "geodata",
+    "typescript"
   ],
   "license": "MIT",
-  "author": "alexdevzz",
+  "author": "alexdevzz <alexdev.workenv@gmail.com> (https://github.com/alexdevzz)",
   "main": "build/index.js",
   "types": "build/globals.d.ts",
   "scripts": {
