@@ -1,6 +1,6 @@
-import { getProvince } from './services/provinceService';
+import { getProvinces } from './services/provinceService';
 
-const aux = getProvince()
+const aux = getProvinces()
 console.log(aux);
 
 
