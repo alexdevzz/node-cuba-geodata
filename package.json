@@ -1,7 +1,7 @@
 {
   "name": "cuba-towns",
-  "version": "0.0.1",
-  "description": "Contains all Cuban locations with the 'Province --> Municipality --> Towns' structure. Enjoy!",
+  "version": "0.1.0",
+  "description": "Contains all Cuban locations with the 'Province -> Cities -> Towns' structure. Enjoy!",
   "keywords": [
     "cuba",
     "cubans",
@@ -9,11 +9,11 @@
     "municipaly",
     "town"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "author": "alexdevzz",
-  "main": "index.ts",
+  "main": "build/index.js",
+  "types": "build/globals.d.ts",
   "scripts": {
-    "nodemon": "nodemon --exec ts-node src/index.ts",
     "dev": "ts-node src/index.ts",
     "start": "node build/index.js",
     "tsc": "tsc"
