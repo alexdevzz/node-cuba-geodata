@@ -11,3 +11,24 @@ export const addTown = (name: string, city: string, description?: string): void 
   }
   throw new Error(`City entered does not exist --> ${city}`)
 }
+
+export const getTowns = (onlyTown: string | null = null): townType | townType[] => {
+  const db = dbConnect()
+
+  // all towns ...
+  if (onlyTown?.trim() === '' || onlyTown === null) {
+    const towns = db.prepare('SELECT name, description FROM town').all() as townType[]
+    db.close()
+    return towns
+  }
+
+  // only one town ...
+  const town = db.prepare('SELECT name, description FROM town WHERE name LIKE ?').get(`%${onlyTown.trim()}%`) as townType
+  if (town) {
+    db.close()
+    return town
+  }
+
+  db.close()
+  throw new Error('That town does not exist')
+}

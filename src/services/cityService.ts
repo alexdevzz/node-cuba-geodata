@@ -12,7 +12,7 @@ export const addCity = (name: string, prov: string, description?: string): void 
   throw new Error(`Province entered does not exist --> ${prov}`)
 }
 
-export const getCities = (onlyCtiy: string | null = null, depth: 0 | 1 = 0): unknown => {
+export const getCities = (onlyCtiy: string | null = null, depth: 0 | 1 = 0): cityType | cityType[] => {
   const db = dbConnect()
 
   // all cities ...
@@ -40,5 +40,5 @@ export const getCities = (onlyCtiy: string | null = null, depth: 0 | 1 = 0): unk
   }
 
   db.close()
-  throw new Error('That province does not exist')
+  throw new Error('That city does not exist')
 }
