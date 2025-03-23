@@ -1,10 +1,10 @@
 # Cuba GeoData <img src="https://github.com/user-attachments/assets/0bf156a7-152f-4de9-8c6b-954c826f0dbc" alt="React" width="30" height="30">
-![NPM Version](https://img.shields.io/npm/v/???)
-![Static Badge](https://img.shields.io/badge/build-in_deploy-red)
-![GitHub License](https://img.shields.io/github/license/alexdevzz/????color=gren)
-![GitHub Created At](https://img.shields.io/github/created-at/alexdevzz/???)
-![GitHub top language](https://img.shields.io/github/languages/top/alexdevzz/????color=purple)
-![Framework](https://img.shields.io/badge/framework-Node_JS-gren)
+![NPM Version](https://img.shields.io/npm/v/cuba-geodata?color=blue)
+![Static Badge](https://img.shields.io/badge/build-deployed-red)
+![GitHub License](https://img.shields.io/github/license/alexdevzz/node-cuba-towns?color=green)
+![GitHub Created At](https://img.shields.io/github/created-at/alexdevzz/node-cuba-towns?color=darkcyan)
+![GitHub top language](https://img.shields.io/github/languages/top/alexdevzz/node-cuba-towns?color=purple)
+![Framework](https://img.shields.io/badge/framework-Node_JS-darkgreen?color=gren)
 
 ## Description
 This module provides an easy way to access geographic information about Cuba, including provinces, municipalities, and localities, in JSON format. It is ideal for developers who need to integrate geographic data about Cuba into their applications, whether for forms, location selection, or any other related use.
