@@ -7,8 +7,16 @@ export const addProvince = (name: string, description?: string): void => {
   db.close()
 }
 
-export const getProvince = (name: string): void => {
+export const getProvince = (name?: string): unknown => {
   const db = dbConnect()
-  const row = db.prepare('SELECT * FROM province WHERE name LIKE ?').get(`%${name.trim()}%`) as provinceType
-  console.log(row);
+  if (!name || name === '') {
+    const rows = db.prepare('SELECT name, description FROM province').all() as provinceType[]
+    return rows
+  }
+  const row = db.prepare('SELECT name, description FROM province WHERE name LIKE ?').get(`%${name.trim()}%`) as provinceType
+  if (row)
+    return row
+  throw new Error('That province does not exist')
 }
+
+
