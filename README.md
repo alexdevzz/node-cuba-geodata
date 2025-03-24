@@ -162,7 +162,7 @@ console.log(province)
 }
 ```
 
-Lo mismo se aplica para los municipios
+Lo mismo se aplica para los municipios pero hasta la profundidad `1`
 
 ``` javascript
 import cubaGeoData from 'cuba-geodata'
@@ -194,13 +194,49 @@ console.log(province)
 
 Con respecto a la profundidad en las localidades simpre es `0` y ya se encuentra estabacida por defecto en ese valor. El resultado es lo mismo que se obtuvo el ejemplo 2 mencionado anteriormente
 
+### Example 4
+Obtener las pronvicas de Cuba sin pasar ningun valor en el nombre y dada una profundidad (*primer parametro nulo y segundo activo*)
 
+``` javascript
+import cubaGeoData from 'cuba-geodata'
 
+// get all provinces with depth = 2 (municipalities and localities) ...
+const provinces = cubaGeoData.getProvinces(null, 2)
+console.log(provinces)
+```
+``` bash
+[
+  ...
+  {
+    name: 'Pinar del Río',
+    description: null,
+    cities: [
+      ...
+      {
+        name: 'Pinar del Río',
+        description: null,
+        towns: [
+          ...
+          {
+            name: 'Centro Ciudad',
+            description: null
+          },
+          {
+            name: 'La Conchita',
+            description: null
+          },
+          ...
+        ]
+      },
+      ...
+    ]
+  },
+  ...
+]
+```
+Lo mismo se aplica para los municipios pero hasta la profundidad `1`
 
-
-
-
-
+Con respecto a la profundidad en las localidades simpre es `0` y ya se encuentra estabacida por defecto en ese valor. El resultado es lo mismo que se obtuvo el ejemplo 1 mencionado anteriormente
 
 
 ## ER Diagram
