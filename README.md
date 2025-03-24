@@ -30,15 +30,39 @@ This module provides an easy way to access geographic information about Cuba, in
    
 3. Ready !!!
 
-## Basic Use
+## Usage
+
+### Example 1
+Obtener todas las provincias de Cuba
 
 ``` javascript
 import cubaGeoData from 'cuba-geodata'
 
-// Get all provinces ...
+// get all provinces 
 const provinces = cubaGeoData.getProvinces()
 console.log(provinces)
 ```
+Console output
+``` bash
+[
+  ...
+  { name: 'La Habana', description: null },
+  { name: 'Mayabeque', description: null },
+  { name: 'Matanzas', description: null },
+  { name: 'Cienfuegos', description: null },
+  { name: 'Villa Clara', description: null },
+  ...
+]
+```
+
+
+
+
+
+
+
+
+
 
 ## ER Diagram
 Here is the Entity-Relationship diagram generated using DBML (Database Markup Language):
