@@ -32,6 +32,32 @@ This module provides an easy way to access geographic information about Cuba, in
 
 ## Basic Usage
 
+La funciones `getProvinces`, `getCities` y `getTowns` obtienen información detallada sobre las provincias, municipios y localidades de Cuba respectivamente, con opciones para filtrar por provincia específica y controlar el nivel de detalle de los datos devueltos.
+
+``` typescript
+function getProvinces (onlyProvince: string | null = null, depth: 0 | 1 | 2 = 0): provinceType | provinceType[] {
+   // function content ...
+}
+
+function getCities (onlyCity: string | null = null, depth: 0 | 1 = 0): cityType | cityType[] {
+   // function content ...
+}
+
+function getTowns (onlyTown: string | null = null): townType | townType[] {
+   // function content ...
+}
+```
+
+### Params
+
+| Parámetro      | Tipo             | Valor por defecto | Descripción |
+|----------------|------------------|-------------------|-------------|
+| `onlyProvince` | `string \| null` | `null`            | Si se especifica un nombre de provincia (ej: `La Habana`), devuelve solo los datos de esa provincia. Si es `null`, devuelve todas las provincias. |
+| `depth`        | `0 \| 1 \| 2`    | `0`               | Controla el nivel de detalle de los datos geográficos devueltos. Por ejemplo para `getProvinces`: <br>• `0`: Solo información básica<br>• `1`: Incluye municipios<br>• `2`: Incluye municipios y localidades. |
+
+
+***
+
 ### Example 1
 Obtener todas las provincias de Cuba. Muestra todas las provincias en un arrays de objetos
 
@@ -91,6 +117,8 @@ console.log(towns)
 ]
 ```
 
+***
+
 ### Example 2
 Obtener una pronvica de Cuba dado su nombre (*primer parametro*)
 
@@ -125,6 +153,8 @@ console.log(town)
 # town ...
 { name: 'Fontanar', description: null }
 ```
+
+***
 
 ### Example 3
 Obtener una pronvica de Cuba dado su nombre y una profundidad (*primer y segundo parametro*)
@@ -193,6 +223,8 @@ console.log(province)
 ```
 
 Con respecto a la profundidad en las localidades simpre es `0` y ya se encuentra estabacida por defecto en ese valor. El resultado es lo mismo que se obtuvo el ejemplo 2 mencionado anteriormente
+
+***
 
 ### Example 4
 Obtener las pronvicas de Cuba sin pasar ningun valor en el nombre y dada una profundidad (*primer parametro nulo y segundo activo*)
