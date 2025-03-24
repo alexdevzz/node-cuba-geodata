@@ -30,10 +30,10 @@ This module provides an easy way to access geographic information about Cuba, in
    
 3. Ready !!!
 
-## Usage
+## Basic Usage
 
 ### Example 1
-Obtener todas las provincias de Cuba
+Obtener todas las provincias de Cuba. Muestra todas las provincias en un arrays de objetos
 
 ``` javascript
 import cubaGeoData from 'cuba-geodata'
@@ -42,7 +42,6 @@ import cubaGeoData from 'cuba-geodata'
 const provinces = cubaGeoData.getProvinces()
 console.log(provinces)
 ```
-Console output
 ``` bash
 [
   ...
@@ -54,6 +53,146 @@ Console output
   ...
 ]
 ```
+
+Lo mismo se aplica para los municipios y localidades
+
+``` javascript
+import cubaGeoData from 'cuba-geodata'
+
+// get all cities (municipalities) ...
+const cities = cubaGeoData.getCities()
+console.log(cities)
+
+// get all towns (localities) ...
+const towns = cubaGeoData.getTowns()
+console.log(towns)
+```
+``` bash
+# cities ...
+[
+  ...
+  { name: 'Fomento', description: null },
+  { name: 'Baraguá', description: null },
+  { name: 'Primero de Enero', description: null },
+  { name: 'Ciro Redondo', description: null },
+  { name: 'Camagüey', description: null },
+  ...
+]
+
+# towns ...
+[
+  ...
+  { name: 'San Cristóbal', description: null },
+  { name: 'Vereda Nueva', description: null },
+  { name: 'Centro Bahía Honda', description: null },
+  { name: 'Cabañas', description: null },
+  { name: 'Mariel', description: null },
+  ...
+]
+```
+
+### Example 2
+Obtener una pronvica de Cuba dado su nombre (*primer parametro*)
+
+``` javascript
+import cubaGeoData from 'cuba-geodata'
+
+// get only one province ...
+const province = cubaGeoData.getProvinces('La Habana')
+console.log(province)
+```
+``` bash
+{ name: 'La Habana', description: null }
+```
+
+Lo mismo se aplica para los municipios y localidades
+
+``` javascript
+import cubaGeoData from 'cuba-geodata'
+
+// get only one city (municipality) ...
+const city = cubaGeoData.getCities('Boyeros')
+console.log(city)
+
+// get only one town (locality) ...
+const town = cubaGeoData.getTowns('Fontanar')
+console.log(town)
+```
+``` bash
+# city ...
+{ name: 'Boyeros', description: null }
+
+# town ...
+{ name: 'Fontanar', description: null }
+```
+
+### Example 3
+Obtener una pronvica de Cuba dado su nombre y una profundidad (*primer y segundo parametro*)
+
+``` javascript
+import cubaGeoData from 'cuba-geodata'
+
+// get only one province with depth = 2 (municipalities and localities) ...
+const province = cubaGeoData.getProvinces('La Habana', 2)
+console.log(province)
+```
+``` bash
+{
+  "name": "La Habana",
+  "description": null,
+  "cities": [
+    ...
+    {
+      "name": "La Habana Vieja",
+      "description": null,
+      "towns": [
+        ...
+        {
+          "name": "Plaza Vieja",
+          "description": null
+        },
+        {
+          "name": "Plaza de la Catedral",
+          "description": null
+        },
+        ...
+    },
+    ...
+  ]
+}
+```
+
+Lo mismo se aplica para los municipios
+
+``` javascript
+import cubaGeoData from 'cuba-geodata'
+
+// get only one city with depth = 1 (localities) ...
+const province = cubaGeoData.getProvinces('La Habana', 2)
+console.log(province)
+```
+``` bash
+# city ...
+{
+  "name": "Boyeros",
+  "description": null,
+  "towns": [
+    ...
+    {
+      "name": "Santiago de las Vegas",
+      "description": null
+    },
+    {
+      "name": "Rancho Boyeros",
+      "description": null
+    },
+    ...
+  ]
+}
+
+```
+
+Con respecto a la profundidad en las localidades simpre es `0` y ya se encuentra estabacida por defecto en ese valor. El resultado es lo mismo que se obtuvo el ejemplo 2 mencionado anteriormente
 
 
 
