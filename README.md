@@ -32,7 +32,7 @@ This module provides an easy way to access geographic information about Cuba, in
 
 ## Basic Usage
 
-La funciones `getProvinces`, `getCities` y `getTowns` obtienen información detallada sobre las provincias, municipios y localidades de Cuba respectivamente, con opciones para filtrar por provincia específica y controlar el nivel de detalle de los datos devueltos.
+The `getProvinces`, `getCities`, and `getTowns` functions return detailed information about Cuba's provinces, municipalities, and towns, respectively, with options to filter by specific name and control the level of detail of the returned data.
 
 ``` typescript
 function getProvinces (onlyProvince: string | null = null, depth: 0 | 1 | 2 = 0): provinceType | provinceType[] {
@@ -50,29 +50,29 @@ function getTowns (onlyTown: string | null = null): townType | townType[] {
 
 ### Params
 
-| Parámetro      | Tipo             | Valor por defecto | Descripción |
-|----------------|------------------|-------------------|-------------|
-| `onlyProvince` | `string \| null` | `null`            | Si se especifica un nombre de provincia (ej: `La Habana`), devuelve solo los datos de esa provincia. Si es `null`, devuelve todas las provincias. |
-| `depth`        | `0 \| 1 \| 2`    | `0`               | Controla el nivel de detalle de los datos geográficos devueltos. Por ejemplo para `getProvinces`: <br>• `0`: Solo información básica<br>• `1`: Incluye municipios<br>• `2`: Incluye municipios y localidades. |
+| Parameter      | Type                 | Default Value  | Description                          |
+|----------------|----------------------|----------------|--------------------------------------|
+| `onlyProvince` | `string \| null`     | `null`         | If a province name is specified (e.g., `La Habana`), returns only data for that province. If `null`, returns all provinces. |
+| `depth`        | `0 \| 1 \| 2`        | `0`            | Controls the level of detail of the returned geographic data. For example, for `getProvinces`: <br>• `0`: Basic information only<br>• `1`: Includes municipalities<br>• `2`: Includes municipalities and localities. |
 
 ### Return Values
 
-- `getProvinces`: 
-  - Si `onlyProvince` es especificado, devuelve un solo objeto `provinceType`
-  - Si `onlyProvince` es `null`, devuelve un array de `provinceType`
-   
-- `getCities`: 
-  - Si `onlyCity` es especificado, devuelve un solo objeto `cityType`
-  - Si `onlyCity` es `null`, devuelve un array de `cityType`
- 
-- `getTowns`: 
-  - Si `onlyTown` es especificado, devuelve un solo objeto `townType`
-  - Si `onlyTown` es `null`, devuelve un array de `townType`
+- `getProvinces`:
+   - If `onlyProvince` is specified, returns a single `provinceType` object
+   - If `onlyProvince` is `null`, returns an array of `provinceType`
+
+- `getCities`:
+   - If `onlyCity` is specified, returns a single `cityType` object
+   - If `onlyCity` is `null`, returns an array of `cityType`
+
+- `getTowns`:
+   - If `onlyTown` is specified, returns a single `townType` object
+   - If `onlyTown` is `null`, returns an array of `townType`
 
 ***
 
 ### Example 1
-Obtener todas las provincias de Cuba. Muestra todas las provincias en un arrays de objetos
+Get all the provinces of Cuba. Displays all provinces in an array of objects.
 
 ``` javascript
 import cubaGeoData from 'cuba-geodata'
@@ -93,7 +93,7 @@ console.log(provinces)
 ]
 ```
 
-Lo mismo se aplica para los municipios y localidades
+The same applies to municipalities and localities.
 
 ``` javascript
 import cubaGeoData from 'cuba-geodata'
@@ -133,7 +133,7 @@ console.log(towns)
 ***
 
 ### Example 2
-Obtener una pronvica de Cuba dado su nombre (*primer parametro*)
+Get a province of Cuba given a name (*first param*)
 
 ``` javascript
 import cubaGeoData from 'cuba-geodata'
@@ -146,7 +146,7 @@ console.log(province)
 { name: 'La Habana', description: null }
 ```
 
-Lo mismo se aplica para los municipios y localidades
+The same applies to municipalities and localities.
 
 ``` javascript
 import cubaGeoData from 'cuba-geodata'
@@ -170,7 +170,7 @@ console.log(town)
 ***
 
 ### Example 3
-Obtener una pronvica de Cuba dado su nombre y una profundidad (*primer y segundo parametro*)
+Get a province of Cuba given a name and depth (*first and second param*)
 
 ``` javascript
 import cubaGeoData from 'cuba-geodata'
@@ -205,7 +205,7 @@ console.log(province)
 }
 ```
 
-Lo mismo se aplica para los municipios pero hasta la profundidad `1`
+The same applies to municipalities but up to depth `1`
 
 ``` javascript
 import cubaGeoData from 'cuba-geodata'
@@ -235,12 +235,12 @@ console.log(province)
 
 ```
 
-Con respecto a la profundidad en las localidades simpre es `0` y ya se encuentra estabacida por defecto en ese valor. El resultado es lo mismo que se obtuvo el ejemplo 2 mencionado anteriormente
+Regarding the depth at the locations, it is always `0` and is already set to that value by default. The result is the same as that obtained in Example 2 mentioned above.
 
 ***
 
 ### Example 4
-Obtener las pronvicas de Cuba sin pasar ningun valor en el nombre y dada una profundidad (*primer parametro nulo y segundo activo*)
+Get the provinces of Cuba without passing any value in the name and given a depth (*first param null and second given*)
 
 ``` javascript
 import cubaGeoData from 'cuba-geodata'
@@ -279,9 +279,9 @@ console.log(provinces)
   ...
 ]
 ```
-Lo mismo se aplica para los municipios pero hasta la profundidad `1`
+The same applies to municipalities, but up to depth '1'.
 
-Con respecto a la profundidad en las localidades simpre es `0` y ya se encuentra estabacida por defecto en ese valor. El resultado es lo mismo que se obtuvo el ejemplo 1 mencionado anteriormente
+Regarding localities, the depth is always '0' and is already set to that value by default. The result is the same as that obtained in Example 1 mentioned above.
 
 
 ## ER Diagram
