@@ -55,6 +55,19 @@ function getTowns (onlyTown: string | null = null): townType | townType[] {
 | `onlyProvince` | `string \| null` | `null`            | Si se especifica un nombre de provincia (ej: `La Habana`), devuelve solo los datos de esa provincia. Si es `null`, devuelve todas las provincias. |
 | `depth`        | `0 \| 1 \| 2`    | `0`               | Controla el nivel de detalle de los datos geográficos devueltos. Por ejemplo para `getProvinces`: <br>• `0`: Solo información básica<br>• `1`: Incluye municipios<br>• `2`: Incluye municipios y localidades. |
 
+### Return Values
+
+- `getProvinces`: 
+  - Si `onlyProvince` es especificado, devuelve un solo objeto `provinceType`
+  - Si `onlyProvince` es `null`, devuelve un array de `provinceType`
+   
+- `getCities`: 
+  - Si `onlyCity` es especificado, devuelve un solo objeto `cityType`
+  - Si `onlyCity` es `null`, devuelve un array de `cityType`
+ 
+- `getTowns`: 
+  - Si `onlyTown` es especificado, devuelve un solo objeto `townType`
+  - Si `onlyTown` es `null`, devuelve un array de `townType`
 
 ***
 
