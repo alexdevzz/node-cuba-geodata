@@ -44,6 +44,9 @@ jobs:
   publish:
     needs: build
     runs-on: ubuntu-latest
+    permissions:  
+      contents: write  # Para crear tags
+      pull-requests: write # Para crear pull requests
     if: github.ref == 'refs/heads/main'
 
     steps:
