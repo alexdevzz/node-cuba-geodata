@@ -27,7 +27,7 @@
     "start": "node build/index.js",
     "build": "tsc",
     "test": "echo 'no tests yet'",
-    "lint": "ts-standard src --fix"
+    "lint": "eslint . --ext .ts"
   },
   "devDependencies": {
     "@types/better-sqlite3": "7.6.12",
