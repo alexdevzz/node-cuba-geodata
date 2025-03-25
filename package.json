@@ -25,7 +25,9 @@
   "scripts": {
     "dev": "ts-node src/index.ts",
     "start": "node build/index.js",
-    "tsc": "tsc"
+    "build": "tsc",
+    "test": "echo 'no tests yet'",
+    "lint": "ts-standard src --fix"
   },
   "devDependencies": {
     "@types/better-sqlite3": "7.6.12",
