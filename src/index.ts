@@ -14,4 +14,4 @@ export default {
   getTowns
 }
 
-// test comment to CI_CD 1
+// test comment to CI_CD 2
