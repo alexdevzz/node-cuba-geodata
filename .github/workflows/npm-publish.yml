@@ -1,12 +1,19 @@
 name: NPM Publish
 
+# Conventional Commits:
+# feat: Nueva característica                      → incrementa versión menor     (1.x.0)
+# fix: Arreglo de bug                             → incrementa versión de parche (1.0.x)
+# feat: Nueva característica BREAKING CHANGE: ... → incrementa versión mayor     (x.0.0)
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 on:
-  release:
-    types: [created]
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
